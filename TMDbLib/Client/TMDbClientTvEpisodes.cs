@@ -14,6 +14,18 @@ namespace TMDbLib.Client
 {
     public partial class TMDbClient
     {
+        public async Task<TranslationsContainerTv> GetTvEpisodeTranslationsAsync(int tvShowId, int seasonNumber, int episodeNumber, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            RestRequest req = _client.Create("tv/{id}/season/{season_number}/episode/{episode_number}/translations");
+            req.AddUrlSegment("id", tvShowId.ToString(CultureInfo.InvariantCulture));
+            req.AddUrlSegment("season_number", seasonNumber.ToString(CultureInfo.InvariantCulture));
+            req.AddUrlSegment("episode_number", episodeNumber.ToString(CultureInfo.InvariantCulture));
+
+            RestResponse<TranslationsContainerTv> response = await req.ExecuteGet<TranslationsContainerTv>(cancellationToken).ConfigureAwait(false);
+
+            return await response.GetDataObject().ConfigureAwait(false);
+        }
+
         public async Task<TvEpisodeAccountState> GetTvEpisodeAccountStateAsync(int tvShowId, int seasonNumber, int episodeNumber, CancellationToken cancellationToken = default(CancellationToken))
         {
             RequireSessionId(SessionType.UserSession);

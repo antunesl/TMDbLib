@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <AssemblyTitle>TMDb Library</AssemblyTitle>
-    <VersionPrefix>1.6.0</VersionPrefix>
+    <VersionPrefix>1.6.2</VersionPrefix>
     <Authors>LordMike;Naliath</Authors>
     <TargetFrameworks>net45;netstandard2.1;netstandard2.0;netstandard1.2</TargetFrameworks>
     <AssemblyName>TMDbLib</AssemblyName>
-    <PackageId>TMDbLib</PackageId>
-    <PackageProjectUrl>https://github.com/LordMike/TMDbLib</PackageProjectUrl>
+    <PackageId>TMDbLib.WIG</PackageId>
+    <PackageProjectUrl>https://github.com/antunesl/TMDbLib</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/LordMike/TMDbLib</RepositoryUrl>
+    <RepositoryUrl>https://github.com/antunesl/TMDbLib</RepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
   </PropertyGroup>
 
